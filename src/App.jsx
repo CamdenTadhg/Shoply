@@ -23,10 +23,6 @@ function App() {
 export default App
 
 
-// create change qty functionality in minicart
-  //need number input
-  // place input in place of current qty count
-  // make sure it updates when add to cart is pressed
 // create route for cart
 // create cart component
 // allow users to change qty of items in their cart
@@ -34,6 +30,7 @@ export default App
 // style cart page
 
 // refactor code
+// create error messages for putting invalid numbers in the numbers field
 // add form to cart page for discount codes
 // set up discout codes
 // ensure you can only do one discount at a time

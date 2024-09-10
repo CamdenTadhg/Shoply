@@ -1,5 +1,5 @@
-import {add, remove, removeAll} from './actionCreators';
-import {ADD, REMOVE, REMOVEALL} from './actionTypes';
+import {add, remove, removeAll, changeQty} from './actionCreators';
+import {ADD, REMOVE, REMOVEALL, CHANGEQTY} from './actionTypes';
 import {test, expect} from 'vitest';
 
 test('creates an add action', () => {
@@ -14,3 +14,6 @@ test('creates a removeAll action', () => {
     expect(removeAll('data')).toEqual({type: REMOVEALL, payload: 'data'});
 })
 
+test('creates a change qty action', () => {
+    expect(changeQty('data')).toEqual({type: CHANGEQTY, payload: 'data'});
+})

@@ -1,4 +1,4 @@
-import {ADD, REMOVE, REMOVEALL} from './actionTypes';
+import {ADD, REMOVE, REMOVEALL, CHANGEQTY} from './actionTypes';
 
 export function add(data) {
     return {
@@ -17,6 +17,13 @@ export function remove(data){
 export function removeAll(data){
     return {
         type: REMOVEALL,
+        payload: data
+    }
+}
+
+export function changeQty(data) {
+    return {
+        type: CHANGEQTY,
         payload: data
     }
 }

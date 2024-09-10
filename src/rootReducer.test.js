@@ -77,6 +77,26 @@ describe('cartReducer function', () => {
         }])
     });
 
+    test('it should remove all of an item from the cart', () => {
+        expect(cartReducer(cart2, {type: "REMOVEALL", payload: "47314fa1-ae56-4eae-80be-af6691145951"})).toEqual([]);
+    });
+
+    test('it should change the quantity of an item in the cart', () => {
+        expect(cartReducer(cart2, {type: "CHANGEQTY", payload: {        
+            id: "47314fa1-ae56-4eae-80be-af6691145951",
+            name: 'tv',
+            price: 219.99,
+            qty: 5,
+            total: 1099.95
+        }})).toEqual([{
+            id: "47314fa1-ae56-4eae-80be-af6691145951",
+            name: 'tv',
+            price: 219.99,
+            qty: 5,
+            total: 1099.95
+        }]);
+    });
+
     test('if trying to remove item not in cart, should return cart', () => {
         expect(cartReducer(cart, {type: 'REMOVE', payload: 'dudd'})).toEqual([{
             id: "47314fa1-ae56-4eae-80be-af6691145951",
