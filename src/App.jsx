@@ -16,7 +16,6 @@ function App() {
 export default App
 
 
-// write tests for action creators
 // write tests for reducers
 // style page
 // create route for product details
