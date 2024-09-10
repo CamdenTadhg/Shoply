@@ -5,7 +5,11 @@ import Box from '@mui/material/Box';
 const MiniCart = () => {
     console.log('minicart rendering');
     const cart = useSelector(store => store.cart);
-    console.log(cart);
+
+    let total = 0;
+    for (let item of cart){
+        total = total + item.total;
+    }
 
     return (
         <div>
@@ -15,6 +19,7 @@ const MiniCart = () => {
                         return <li key={item.id}>{item.qty} {item.name}: ${item.total}</li>
                     })}
                 </ul>
+                <div>Cart Total: ${total}</div>
             </Box>
         </div>
 

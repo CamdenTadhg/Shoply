@@ -16,10 +16,9 @@ function App() {
 export default App
 
 
-// display total of all items in the cart
-// style page
 // write tests for action creators
 // write tests for reducers
+// style page
 // create route for product details
 // create link for product details page
 // create product details component
@@ -49,3 +48,5 @@ export default App
 // add a secret_discounts_page to add and remove coupon codes
 // add a products/new route to add products to the inventory
 // add save for later functionality to cart (don't count towards total price)
+// write any additional tests I'm missing
+// refactor code
