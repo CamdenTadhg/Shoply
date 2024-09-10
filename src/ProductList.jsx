@@ -10,7 +10,7 @@ const ProductList = () => {
     return (
         <List>
             {stock.map((item) => {
-                return <ProductListing product={item}/>
+                return <ProductListing key={item.id} product={item}/>
             })}
         </List>
     )

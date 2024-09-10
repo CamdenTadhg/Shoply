@@ -1,23 +1,16 @@
-import React from 'react'
+import React from 'react';
 import ProductList from './ProductList';
-import './App.css'
+import MiniCart from './MiniCart';
+import './App.css';
 
 function App() {
-  const product = {
-    name: 'television',
-    price: 23.99
-  }
-
-  const product2 = {
-    name: 'chair', 
-    price: 100.00
-  }
 
   return (
     <>
       <ProductList/>
+      <MiniCart />
     </>
-  )
+  );
 }
 
 export default App
