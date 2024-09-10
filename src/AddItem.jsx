@@ -1,9 +1,17 @@
 import React from 'react';
 import Button from '@mui/material/Button';
+import {useDispatch} from 'react-redux';
+import {add} from './actionCreators';
 
-const AddItem = () => {
+const AddItem = ({product}) => {
+    const dispatch = useDispatch();
+
+    const addItem = () => {
+        dispatch(add(product));
+    }
+    
     return (
-        <Button variant="contained" color="secondary">Add To Cart</Button>
+        <Button variant="contained" color="secondary" onClick={addItem}>Add To Cart</Button>
     )
 }
 

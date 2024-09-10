@@ -8,23 +8,32 @@ function cartReducer(state=CART_INITIAL_STATE, action){
         case 'ADD': 
             const incItem = state.find((item) => item.id === action.payload.id);
             if (incItem){
-                incItem.qty += 1;
+                let newIncItem = {...incItem, qty: incItem.qty + 1, };
+                let total = newIncItem.price * newIncItem.qty;
+                newIncItem.total = total;
                 let newState = state.filter((item) => item.id !== action.payload.id);
-                newState.push(incItem);
+                newState.push(newIncItem);
                 return newState
             } else {
-                return [...state, action.payload]
+                return [...state, {...action.payload, qty: 1, total: action.payload.price}]
             }
         case 'REMOVE': 
             const decItem = state.find((item) => item.id === action.payload);
-            if (decItem.qty > 1){
-                decItem.qty -= 1;
-                let newState = state.filter((item) => item.id !== action.payload);
-                newState.push(decItem);
-                return newState;
+            console.log('decItem is ', decItem)
+            if (decItem){
+                if (decItem.qty > 1){
+                    let newDecItem = {...decItem, qty: decItem.qty - 1};
+                    let total = newDecItem.price * newDecItem.qty;
+                    newDecItem.total = total;
+                    let newState = state.filter((item) => item.id !== action.payload);
+                    newState.push(newDecItem);
+                    return newState;
+                } else {
+                    let newState = state.filter((item) => item.id !== action.payload);
+                    return newState;
+                }
             } else {
-                let newState = state.filter((item) => item.id !== action.payload);
-                return newState;
+                return state;
             }
         default: 
             return state;

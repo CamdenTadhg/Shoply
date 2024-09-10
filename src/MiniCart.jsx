@@ -12,8 +12,7 @@ const MiniCart = () => {
             <Box component="section" sx={{border: '1px dashed gray'}}>
                 <ul>
                     {cart.map((item) => {
-                        item.total = item.price * item.qty;
-                        return <li key={item.id}>{item.qty} {item.name}: {item.total}</li>
+                        return <li key={item.id}>{item.qty} {item.name}: ${item.total}</li>
                     })}
                 </ul>
             </Box>

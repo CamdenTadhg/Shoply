@@ -10,8 +10,8 @@ const ProductListing = ({product}) => {
         <ListItem id={product.id}>
             <ListItemText>{product.name}</ListItemText>
             <ListItemText>${product.price}</ListItemText>
-            <AddItem/>
-            <RemoveItem/>
+            <AddItem product={product}/>
+            <RemoveItem product={product}/>
         </ListItem>
     )
 }

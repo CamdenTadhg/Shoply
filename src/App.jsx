@@ -15,16 +15,13 @@ function App() {
 
 export default App
 
-// create minicart component
-// allow users to add single items to their cart
-// allow users to add multiple items to their cart
-// allow users to remove items from their cart
+
 // display total of all items in the cart
-// write tests for reducers
-// write tests for action creators
 // style page
+// write tests for action creators
+// write tests for reducers
 // create route for product details
-//create link for product details page
+// create link for product details page
 // create product details component
 // allow users to add items to their cart from product details page
 // allow users to remove items from their cart from product details page
@@ -35,6 +32,7 @@ export default App
 // allow users to remove items from their cart from the cart
 // style cart page
 
+//refactor code
 //add form to cart page for discount codes
 // set up discout codes
 // ensure you can only do one discount at a time
