@@ -1,7 +1,17 @@
 import React from 'react'
+import ProductListing from './ProductListing';
 import './App.css'
 
 function App() {
+  const product = {
+    name: 'television',
+    price: 23.99
+  }
+
+  const product2 = {
+    name: 'chair', 
+    price: 100.00
+  }
 
   return (
     <>

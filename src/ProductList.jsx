@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux';
 
 const ProductList = () => {
     const stock = useSelector(store => store.stock)
+    
     return ()
 }
 

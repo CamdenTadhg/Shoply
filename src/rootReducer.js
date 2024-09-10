@@ -1,4 +1,4 @@
-import './data.json';
+import stock from './data.json' assert {type: 'json'};
 import {combineReducers} from 'redux';
 
 const CART_INITIAL_STATE = []
@@ -31,7 +31,7 @@ function cartReducer(state=CART_INITIAL_STATE, action){
     }
 }
 
-const STOCK_INITIAL_STATE = data.json;
+const STOCK_INITIAL_STATE = stock;
 
 function stockReducer(state=STOCK_INITIAL_STATE, action){
     switch (action.type){
