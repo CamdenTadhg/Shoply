@@ -19,7 +19,6 @@ function cartReducer(state=CART_INITIAL_STATE, action){
             }
         case 'REMOVE': 
             const decItem = state.find((item) => item.id === action.payload);
-            console.log('decItem is ', decItem)
             if (decItem){
                 if (decItem.qty > 1){
                     let newDecItem = {...decItem, qty: decItem.qty - 1};
@@ -58,3 +57,4 @@ function stockReducer(state=STOCK_INITIAL_STATE, action){
 const rootReducer = combineReducers({stock: stockReducer, cart: cartReducer});
 
 export default rootReducer;
+export {cartReducer, stockReducer};
