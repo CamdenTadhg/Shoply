@@ -1,14 +1,21 @@
 import React from 'react';
 import ProductList from './ProductList';
 import MiniCart from './MiniCart';
+import Grid from '@mui/material/Grid2';
 import './App.css';
 
 function App() {
 
   return (
     <>
-      <ProductList/>
-      <MiniCart />
+    <Grid container>
+      <Grid size={9}>
+        <ProductList/>
+      </Grid>
+      <Grid size={3}>
+        <MiniCart />
+      </Grid>
+    </Grid>
     </>
   );
 }
@@ -16,8 +23,6 @@ function App() {
 export default App
 
 
-// write tests for reducers
-// style page
 // create route for product details
 // create link for product details page
 // create product details component
@@ -30,7 +35,7 @@ export default App
 // allow users to remove items from their cart from the cart
 // style cart page
 
-//refactor code
+// refactor code
 //add form to cart page for discount codes
 // set up discout codes
 // ensure you can only do one discount at a time
@@ -41,7 +46,7 @@ export default App
 // store cart in local storage
 //deploy app on render
 // add out of stock functionality
-// add responsive styling
+// add good, responsive styling
 // write component tests
 // add a backend
 // add a secret_discounts_page to add and remove coupon codes

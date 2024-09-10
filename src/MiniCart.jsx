@@ -1,6 +1,10 @@
 import React from 'react'; 
 import {useSelector} from 'react-redux';
 import Box from '@mui/material/Box';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import './MiniCart.css';
 
 const MiniCart = () => {
     console.log('minicart rendering');
@@ -14,12 +18,16 @@ const MiniCart = () => {
     return (
         <div>
             <Box component="section" sx={{border: '1px dashed gray'}}>
-                <ul>
+                <h3>Your Cart</h3>
+                <List>
                     {cart.map((item) => {
-                        return <li key={item.id}>{item.qty} {item.name}: ${item.total}</li>
+                        return <ListItem key={item.id}>
+                            <ListItemText>{item.qty} {item.name}:</ListItemText> 
+                            <ListItemText sx={{textAlign: 'right'}}>${item.total}</ListItemText>
+                        </ListItem>
                     })}
-                </ul>
-                <div>Cart Total: ${total}</div>
+                </List>
+                <div id='minicart-total'>Cart Total: ${total}</div>
             </Box>
         </div>
 

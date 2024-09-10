@@ -9,9 +9,9 @@ const AddItem = ({product}) => {
     const addItem = () => {
         dispatch(add(product));
     }
-    
+
     return (
-        <Button variant="contained" color="secondary" onClick={addItem}>Add To Cart</Button>
+        <Button variant="contained" color="secondary" sx={{margin: '0px 10px'}} onClick={addItem}>Add To Cart</Button>
     )
 }
 

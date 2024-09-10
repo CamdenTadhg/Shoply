@@ -1,0 +1,12 @@
+li {
+    list-style-type: none;
+    text-align: left;
+}
+
+.price-span {
+    text-align: right;
+}
+
+#minicart-total{
+    font-weight: bold;
+}
