@@ -3,10 +3,11 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 
 const ProductListing = ({product}) => {
+    console.log('product listing rendering')
     return (
-        <ListItem>
+        <ListItem id={product.id}>
             <ListItemText>{product.name}</ListItemText>
-            <ListItemText>{product.price}</ListItemText>
+            <ListItemText>${product.price}</ListItemText>
         </ListItem>
     )
 }

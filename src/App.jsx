@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductListing from './ProductListing';
+import ProductList from './ProductList';
 import './App.css'
 
 function App() {
@@ -15,13 +15,13 @@ function App() {
 
   return (
     <>
+      <ProductList/>
     </>
   )
 }
 
 export default App
 
-// create product list component
 // create add item component
 // create remove item component
 // allow users to add single items to their cart
@@ -32,6 +32,7 @@ export default App
 // write tests for action creators
 // style page
 // create route for product details
+//create link for product details page
 // create product details component
 // allow users to add items to their cart from product details page
 // allow users to remove items from their cart from product details page

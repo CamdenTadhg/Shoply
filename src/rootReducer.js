@@ -31,7 +31,13 @@ function cartReducer(state=CART_INITIAL_STATE, action){
     }
 }
 
-const STOCK_INITIAL_STATE = stock;
+let idNums = Object.keys(stock.products)
+let stockItems = Object.values(stock.products)
+let stockArray = [];
+for (let i = 0; i < idNums.length; i++){
+   stockArray.push({id: idNums[i], ...stockItems[i]}); 
+}
+const STOCK_INITIAL_STATE = stockArray;
 
 function stockReducer(state=STOCK_INITIAL_STATE, action){
     switch (action.type){
