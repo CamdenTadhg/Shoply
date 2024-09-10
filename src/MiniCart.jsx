@@ -7,7 +7,6 @@ import ListItemText from '@mui/material/ListItemText';
 import './MiniCart.css';
 
 const MiniCart = () => {
-    console.log('minicart rendering');
     const cart = useSelector(store => store.cart);
 
     let total = 0;

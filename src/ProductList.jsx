@@ -5,7 +5,6 @@ import List from '@mui/material/List';
 
 const ProductList = () => {
     const stock = useSelector(store => store.stock);
-    console.log('product list rendering');
 
     return (
         <List>
