@@ -22,8 +22,7 @@ function App() {
 
 export default App
 
-// create add item component
-// create remove item component
+// create minicart component
 // allow users to add single items to their cart
 // allow users to add multiple items to their cart
 // allow users to remove items from their cart
