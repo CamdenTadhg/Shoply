@@ -34,6 +34,8 @@ function cartReducer(state=CART_INITIAL_STATE, action){
             } else {
                 return state;
             }
+        case 'REMOVEALL': 
+            return state.filter((item) => item.id !== action.payload )
         default: 
             return state;
     }

@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
+import RemoveAllItem from './RemoveAllItem';
 import './MiniCart.css';
 
 const MiniCart = () => {
@@ -23,6 +24,7 @@ const MiniCart = () => {
                         return <ListItem key={item.id}>
                             <ListItemText>{item.qty} {item.name}:</ListItemText> 
                             <ListItemText sx={{textAlign: 'right'}}>${item.total}</ListItemText>
+                            <RemoveAllItem product={item}/>
                         </ListItem>
                     })}
                 </List>

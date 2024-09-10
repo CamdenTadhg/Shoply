@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import MainPage from './MainPage';
 import ProductDetailPage from './ProductDetailPage';
+import Cart from './Cart';
 import './App.css';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/products/:id' element={<ProductDetailPage />} />
+        <Route path='/cart' element={<Cart />} />
         <Route path='/' element={<MainPage />} />
       </Routes>
     </BrowserRouter>
@@ -21,12 +23,13 @@ function App() {
 export default App
 
 
-//change actionstypes, actioncreators, and rootreducer to allow removing all from cart
-// create component to remove all from cart
-// allow users to remove all of an item from their cart
+// create change qty functionality in minicart
+  //need number input
+  // place input in place of current qty count
+  // make sure it updates when add to cart is pressed
 // create route for cart
 // create cart component
-// allow users to add items to their cart
+// allow users to change qty of items in their cart
 // allow users to remove items from their cart
 // style cart page
 

@@ -3,6 +3,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import AddItem from './AddItem';
 import RemoveItem from './RemoveItem';
+import RemoveAllItem from './RemoveAllItem';
 import {Link} from 'react-router-dom';
 import './ProductListing.css';
 
