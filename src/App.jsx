@@ -23,11 +23,6 @@ function App() {
 export default App
 
 
-// create route for cart
-// create cart component
-// allow users to change qty of items in their cart
-// allow users to remove items from their cart
-// style cart page
 
 // refactor code
 // create error messages for putting invalid numbers in the numbers field

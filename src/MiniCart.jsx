@@ -6,10 +6,10 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import RemoveAllItem from './RemoveAllItem';
 import ChangeQty from './ChangeQty';
+import {Link} from 'react-router-dom';
 import './MiniCart.css';
 
 const MiniCart = () => {
-    console.log('minicart re-rendering');
     const cart = useSelector(store => store.cart);
 
     let total = 0;
@@ -20,7 +20,7 @@ const MiniCart = () => {
     return (
         <div>
             <Box component="section" sx={{border: '1px dashed gray'}}>
-                <h3>Your Cart</h3>
+                <h3><Link to='/cart'>Your Cart</Link></h3>
                 <List>
                     {cart.map((item) => {
                         return <ListItem key={item.id}>

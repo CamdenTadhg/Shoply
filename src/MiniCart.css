@@ -9,4 +9,6 @@ li {
 
 #minicart-total{
     font-weight: bold;
+    text-align: right;
+    margin: 10px;
 }

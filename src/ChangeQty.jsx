@@ -6,9 +6,6 @@ import './ChangeQty.css';
 
 
 const ChangeQty = ({product, quantity}) => {
-    console.log('changeQty re-rendering');
-    console.log('product is ', product);
-    console.log('quantity is ', quantity);
     let qty = quantity;
     const dispatch = useDispatch();
 
